@@ -49,4 +49,12 @@ armario.save()
 
 console.log(armario)
 
+const busca = async () => {
+    return Locker.findById(armario._id).populate("student")
+}
+
+const buscaArmario = await busca()
+
+console.log(buscaArmario)
+
 export default Locker;
